@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 
+const cors_api_host = 'https://cors-anywhere.herokuapp.com/' 
 const quoteURL = 'https://inspiration.goprogram.co.uk/'
+
 
 export default class QuoteContainer extends Component {
 
@@ -9,15 +11,15 @@ export default class QuoteContainer extends Component {
   }
 
   componentDidMount() {
-    fetch(quoteURL)
+    fetch(cors_api_host + quoteURL)
     .then(response => response.json())
-    .then(console.log)
+    .then(quote => this.setState({ quote }))
   }
 
   render() {
     return (
       <div>
-        {/* { this.state.quote } */}
+        { this.state.quote.quote }
       </div>
     )
   }

@@ -18,9 +18,6 @@ class HabitsContainer extends Component {
     render() {
       return (
         <div className="App">
-          <header className="App-header">
-            <h1>Habit Tracker</h1>
-          </header>
           <HabitCard habits={ this.state.habits } />
         </div>
         );

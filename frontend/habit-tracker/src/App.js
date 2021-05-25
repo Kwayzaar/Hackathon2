@@ -9,8 +9,13 @@ class App extends Component {
   render() {
     return(
       <div>
-        <QuoteContainer  />
-        <HabitsContainer />
+        <header>
+          <h1>Habit Tracker</h1>
+        </header>
+        <div>
+          <QuoteContainer  />
+          <HabitsContainer />
+        </div>
       </div>
     ) 
   }
